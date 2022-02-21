@@ -45,6 +45,7 @@ hb_memory_mode_t
 HB_SEGMENT_PROPERTIES_DEFAULT
 HB_BUFFER_REPLACEMENT_CODEPOINT_DEFAULT
 hb_buffer_create
+hb_buffer_create_similar
 hb_buffer_reference
 hb_buffer_get_empty
 hb_buffer_destroy
@@ -103,6 +104,7 @@ hb_buffer_serialize_format_to_string
 hb_buffer_serialize_list_formats
 hb_segment_properties_equal
 hb_segment_properties_hash
+hb_segment_properties_overlay
 hb_buffer_diff
 hb_buffer_set_message_func
 hb_buffer_t
@@ -189,6 +191,7 @@ HB_SCRIPT_CANADIAN_ABORIGINAL
 hb_font_funcs_set_glyph_func
 hb_font_get_glyph_func_t
 HB_MATH_GLYPH_PART_FLAG_EXTENDER
+HB_OT_MATH_SCRIPT
 hb_ot_layout_table_choose_script
 hb_ot_layout_table_find_script
 hb_ot_tag_from_language
@@ -329,9 +332,11 @@ hb_font_get_parent
 hb_font_get_ppem
 hb_font_get_ptem
 hb_font_get_scale
+hb_font_get_synthetic_slant
 hb_font_get_user_data
 hb_font_get_variation_glyph
 hb_font_get_variation_glyph_func_t
+hb_font_get_var_coords_design
 hb_font_get_var_coords_normalized
 hb_font_glyph_from_string
 hb_font_glyph_to_string
@@ -345,6 +350,7 @@ hb_font_set_parent
 hb_font_set_ppem
 hb_font_set_ptem
 hb_font_set_scale
+hb_font_set_synthetic_slant
 hb_font_set_user_data
 hb_font_set_variations
 hb_font_set_var_coords_design
@@ -537,9 +543,10 @@ hb_ot_layout_glyph_sequence_func_t
 <SECTION>
 <FILE>hb-ot-math</FILE>
 HB_OT_TAG_MATH
-HB_OT_MATH_SCRIPT
+HB_OT_TAG_MATH_SCRIPT
 hb_ot_math_constant_t
 hb_ot_math_kern_t
+hb_ot_math_kern_entry_t
 hb_ot_math_glyph_variant_t
 hb_ot_math_glyph_part_flags_t
 hb_ot_math_glyph_part_t
@@ -548,6 +555,7 @@ hb_ot_math_get_constant
 hb_ot_math_get_glyph_italics_correction
 hb_ot_math_get_glyph_top_accent_attachment
 hb_ot_math_get_glyph_kerning
+hb_ot_math_get_glyph_kernings
 hb_ot_math_is_glyph_extended_shape
 hb_ot_math_get_glyph_variants
 hb_ot_math_get_min_connector_overlap
